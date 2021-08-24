@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron&display=swap');
+
+/* Regra utilitáia para ajustes no Box Model (usar sempre! em qualquer projeto web) */
+*, *::after, *::before { box-sizing: border-box; }
+
+html { 
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(../imagens/textura-fundo.png);
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+img { max-width: 100%; }
+
+body, h1, h2, h3, p, figure {
+    margin: 0;
+    padding: 0px
+    ;
+
+}
+a { 
+    text-decoration: none;
+    color: black;
+}
+
+header, footer {
+     background-color: rgb(202, 194, 194, 0.699);
+     text-align: center;
+}
+
+header { 
+    border-bottom: solid 2px;
+    margin-bottom: 7px;
+}
+
+footer { border-top: solid 2px; }
+
+main {
+    width: 95%;
+    margin: auto;
+}
+
+article {
+    background-color: white;
+    box-shadow: grey 1px 1px 5px;
+    margin-bottom: 10px;
+    padding: 7px;
+
+}
+
+h1, nav, h2, h3, button {
+    font-family: 'Orbitron', Verdana, sans-serif;
+}
+
+h2, h3, p { padding: 1% 0; } 
+
+/* p { line-height: 2; } altura de linha */
+
+footer img { width: 50px; }
+
+footer h2 { font-size: 1.2rem; }
+
+footer p { font-size: .75rem; }
+
+section, figure { margin: 40px 0; }
+
+figcaption {
+    text-align: center;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+iframe { width: 100%; }
+
+/*  Regras temporárias para auxilio no ajuste de espaços e alinhamento */
+
+/* h1 { background-color: red;}
+h1 a { background-color: green;}
+nav { background-color: yellow;}
+nav a { background-color: lightblue;} */
+
+h1, h1 a, nav, nav a { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 { 
+    padding: 5px 0;
+    font-size: 2.2rem;
+}
+
+h1 img { width: 50px; }
+
+nav a {
+    height: 50px;
+    font-size: 1.1rem;
+    width: 100%;
+ }
+
+ nav a:hover, nav a:focus {
+     background-color: black;
+     color: white;
+ }
+
+ article img { 
+     filter: grayscale(50%);
+     transition: 2s;
+ }
+
+ article img:hover { filter: grayscale(0);}
+
+ /* Regras para formulário */
+ input, textarea {
+     border: solid 2px;
+     width: 100%;
+     padding: 10px;
+ }
+
+ label { font-size: .7rem; }
+
+button { 
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px; 
+}
+ 
+button:hover, button:focus {
+    background-color: darkblue;
+    cursor: pointer; /* altera o cursor do mouse */
+}
+
+
+#voltar-topo { 
+    position: fixed;
+
+    /* top,bottom, left, right, z-index */
+    bottom: 5px;
+    right: 5px;
+}
+/* apenas o link existente no elemento identificado */
+#voltar-topo a  { 
+    background-color: black;
+    color: white;
+    padding: 5px;
+} 
+
+#voltar-topo a:hover, #voltar-topo a:focus { 
+    background-color: darkblue;
+}
+
+@media screen and (min-width:700px) {
+    header .container { 
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+    }  
+}
+
+/* Exercícios */
+
+/* 1) Acesse o HTML da página index e adicione uma div com a classe "grupo" às seções do artigo O Que Fazemos  - abrir e fechar no section 
+
+2) Acesse o HTML da página index e adicione uma div com a classe "grupo" às seções do artigo Nossas Equipes  - abrir e fechar no figure 
+
+3)Crie uma nova media query para telas a partir de 750px (esse valor pode mudar), com as seguintes regras/propriedades:
+
+- uma classe chamada grupo, contento flex (justify) espaçamento entre e flex-wrap: wrap (pesquise do que se trata)
+
+- uma regra para as seções contidas na classe grupo, e pra os figures contidos na classe grupo, contedo largura de 49% (experimente antes usar 50%)
+*/
+
+@media screen and (min-width:750px) {
+    .grupo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .grupo section, .grupo figure {
+        width: 49%; 
+        margin-top: 5px;
+        margin-bottom: 5px;
+        }
+}
+
+@media screen and (min-width:820px){
+    html { font-size: 20px; }
+}    
+
+@media screen and (min-width: 1000px) {
+    .container, main { max-width: 1000px; }
+
+    header {
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        top: 0;
+    }
+}
+
+#voltar-topo { display: none; }
+
+#topo, #o-que-fazemos, #nossas-equipes, #contato { 
+    padding-top: 75px;
+}
