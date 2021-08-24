@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron&display=swap');
 
 /* Regra utilitáia para ajustes no Box Model (usar sempre! em qualquer projeto web) */
@@ -205,10 +204,10 @@ button:hover, button:focus {
         width: 100%;
         top: 0;
     }
-}
 
 #voltar-topo { display: none; }
 
 #topo, #o-que-fazemos, #nossas-equipes, #contato { 
     padding-top: 75px;
+}
 }
