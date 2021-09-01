@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+*, *::after, *::before { box-sizing: border-box;}
+
+html {
+     font-size: 18px; 
+     scroll-behavior: smooth;
+}
+
+body { 
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif, Verdana, Geneva, Tahoma;
+    text-align: center;
+}
+
+nav { 
+    background-color: black;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+nav a { 
+    text-decoration: none;
+    font-size: 40px;
+    color: white;
+}
+
+nav a:hover, nav a:focus { 
+    background-color: white;
+    color: black;
+}
+
+button {
+    border: black solid 2px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-family: 'Quicksand'
+}
+
+button:hover, button:focus {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+img {max-width: 100%;}
+
+iframe { max-width: 100%;}
+
+p { font-family:  'Quicksand', Verdana, Geneva, Tahoma, sans-serif; }
+
+.container { 
+    background-color: #0396a6;
+    padding: 10px;
+    margin-bottom: 8px;
+    }
+
+.container h2 {
+    background: white;
+    padding: 5px;
+    width: 50%;
+    margin: auto;
+}
+
+input, textarea { 
+    border: solid 1px;
+    width: 100%;
+    padding: 5px;
+}
+
+form p { text-align: left;}
+
+.apresentacao { 
+    border: solid 3px white;
+    width: 100%;
+    margin: auto;
+    padding: 1px;
+ }
+
+
+
+ @media screen and (max-width:1000px) {
+    nav { 
+        flex-direction: column;
+        height: 250px;
+    }
+
+    nav a { font-size: 20px}
+
+    nav img {width: 100px; }
+    
+}
