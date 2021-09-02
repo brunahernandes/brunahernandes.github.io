@@ -210,9 +210,19 @@
         <p>Desenvolvido por <b>Bruna Hernandes</b> © 2021 </p>
      </footer>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script type="text/javascript" src="slick/slick.min.js"></script>
 
-
+<script>
+    $(document).ready(function(){
+  $('.slider').slick({
+    autoplay: true,
+    autoplaySpeed: 4000, 
+    dots: true
+  });
+});
+</script>
 <script>
     var form = document.getElementById("my-form");
     
